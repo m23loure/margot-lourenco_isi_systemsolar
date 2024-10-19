@@ -1,7 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UI.Dates;
 
 public static class PlanetData
 {
@@ -67,6 +68,7 @@ public static class PlanetData
             Mathf.Sin(Mathf.Deg2Rad * peri) * Mathf.Sin(Mathf.Deg2Rad * incl) * x_prime
             + Mathf.Cos(Mathf.Deg2Rad * peri) * Mathf.Sin(Mathf.Deg2Rad * incl) * y_prime);
     }
+        
 
     private static float[] GetKeplerParameter(Planet planet, KeplerParameter param)
     {
@@ -247,4 +249,6 @@ public static class PlanetData
         }
         return new float[] { 0, 0 };
     }
+
+    
 }
